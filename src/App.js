@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
-import './App.css';
-import Header from './Components/Header';
-import Grid from './Components/Grid';
+import React, { Component } from 'react'
+import './App.css'
+import Header from './Components/Header'
+import Grid from './Components/Grid'
 
 class App extends Component {
   state = {
-    rows: 4
+    rowsCount: 4
   }
 
   render() {
-    const { rows } = this.state;
+    const { rowsCount } = this.state
 
     return (
       <div className="App">
         <Header />
-        <Grid rows={rows}/>
+        <Grid rowsCount={rowsCount}/>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
