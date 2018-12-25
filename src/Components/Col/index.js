@@ -1,11 +1,11 @@
 import React from 'react'
 import './style.css'
 
-const Col = ({ id }) => {
+const Col = ({ id, onClick }) => {
 
     return (
-        <div className="col">
-            {id}
+        <div className="col" onClick={onClick(id)}>
+            
         </div>
     )
 }
