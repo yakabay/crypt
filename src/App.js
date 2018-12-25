@@ -5,16 +5,16 @@ import Grid from './Components/Grid'
 
 class App extends Component {
   state = {
-    rowsCount: 4
+    rowsColsCount: 4
   }
 
   render() {
-    const { rowsCount } = this.state
+    const { rowsColsCount } = this.state
 
     return (
       <div className="App">
         <Header />
-        <Grid rowsCount={rowsCount}/>
+        <Grid rowsColsCount={rowsColsCount}/>
       </div>
     )
   }

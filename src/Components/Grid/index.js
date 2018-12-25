@@ -2,12 +2,12 @@ import React from 'react'
 import Row from '../Row'
 import './style.css'
 
-const Grid = ({ rowsCount }) => {
+const Grid = ({ rowsColsCount }) => {
     const renderRows = () => {
         const rows = [] 
-        for (let i = 1; i <= rowsCount; i++) {
+        for (let i = 1; i <= rowsColsCount; i++) {
             rows.push(
-                <Row id ={i} key={i} />
+                <Row colsCount={rowsColsCount} id={i} key={i} />
             )
         }
 
