@@ -8,7 +8,7 @@ class App extends Component {
     rowsColsCount: 4
   }
 
-  handleClickOnCol = id => alert(id)
+  handleClickOnCol = id => console.log(id)
 
   render() {
     const { rowsColsCount } = this.state

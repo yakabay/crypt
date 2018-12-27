@@ -18,8 +18,7 @@ const Row = ({ colsCount, id, onColClick }) => {
 
     return (
         <div className="row">
-            {/* {renderCols()} */}
-            {<Col id={id} onColClick={onColClick}/>}
+            {renderCols()}
         </div>
     )
 }
