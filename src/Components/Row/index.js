@@ -1,24 +1,24 @@
 import React from 'react'
-import Col from '../Col'
+import Cell from '../Cell'
 import './style.css'
 
-const Row = ({ colsCount, id, onColClick }) => {
+const Row = ({ rowNumber, cellsCount, onCellClick }) => {
     
-    const renderCols = () => {
+    const renderCells = () => {
 
-        const cols = [] 
-        for (let i = 1; i <= colsCount; i++) {
-            cols.push(
-                <Col id={id*10 + i} key={i} onColClick={onColClick}/>
+        const cells = [] 
+        for (let i = 1; i <= cellsCount; i++) {
+            cells.push(
+                <Cell rowNumber={rowNumber} colNumber={i} onCellClick={onCellClick} key={i} />
             )
         }
 
-        return cols
+        return cells
     }
 
     return (
         <div className="row">
-            {renderCols()}
+            {renderCells()}
         </div>
     )
 }

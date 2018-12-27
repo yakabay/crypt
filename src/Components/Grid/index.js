@@ -2,12 +2,12 @@ import React from 'react'
 import Row from '../Row'
 import './style.css'
 
-const Grid = ({ rowsColsCount, onColClick }) => {
+const Grid = ({ count, onCellClick }) => {
     const renderRows = () => {
         const rows = [] 
-        for (let i = 1; i <= rowsColsCount; i++) {
+        for (let i = 1; i <= count; i++) {
             rows.push(
-                <Row colsCount={rowsColsCount} onColClick={onColClick} id={i} key={i} />
+                <Row rowNumber={i} cellsCount={count} onCellClick={onCellClick} key={i} />
             )
         }
 

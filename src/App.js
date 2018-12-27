@@ -5,18 +5,18 @@ import Grid from './Components/Grid'
 
 class App extends Component {
   state = {
-    rowsColsCount: 4
+    count: 4
   }
 
   handleClickOnCol = id => console.log(id)
 
   render() {
-    const { rowsColsCount } = this.state
+    const { count } = this.state
 
     return (
       <div className="App">
         <Header />
-        <Grid rowsColsCount={rowsColsCount} onColClick={this.handleClickOnCol}/>
+        <Grid count={count} onCellClick={this.handleClickOnCol} />
       </div>
     )
   }
