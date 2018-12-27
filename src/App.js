@@ -8,13 +8,15 @@ class App extends Component {
     rowsColsCount: 4
   }
 
+  handleClickOnCol = id => alert(id)
+
   render() {
     const { rowsColsCount } = this.state
 
     return (
       <div className="App">
         <Header />
-        <Grid rowsColsCount={rowsColsCount}/>
+        <Grid rowsColsCount={rowsColsCount} onColClick={this.handleClickOnCol}/>
       </div>
     )
   }

@@ -2,17 +2,14 @@ import React from 'react'
 import Col from '../Col'
 import './style.css'
 
-const Row = ({ colsCount, id }) => {
+const Row = ({ colsCount, id, onColClick }) => {
     
     const renderCols = () => {
-        const handleClickOnCol = (id) => {
-            alert(id)
-        }
 
         const cols = [] 
         for (let i = 1; i <= colsCount; i++) {
             cols.push(
-                <Col id={id*10 + i} key={i} onClick={() => handleClickOnCol}/>
+                <Col id={id*10 + i} key={i} onColClick={onColClick}/>
             )
         }
 
@@ -21,7 +18,8 @@ const Row = ({ colsCount, id }) => {
 
     return (
         <div className="row">
-            {renderCols()}
+            {/* {renderCols()} */}
+            {<Col id={id} onColClick={onColClick}/>}
         </div>
     )
 }

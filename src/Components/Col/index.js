@@ -1,10 +1,12 @@
 import React from 'react'
 import './style.css'
 
-const Col = ({ id, onClick }) => {
+const Col = ({ id, onColClick }) => {
+
+    const handleClick = () => onColClick(id)
 
     return (
-        <div className="col" onClick={onClick(id)}>
+        <div className="col" onClick={handleClick}>
             
         </div>
     )
