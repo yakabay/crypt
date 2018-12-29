@@ -7,7 +7,7 @@
     transition: background-color .2s ease-in;
 }
 
-.cell:not(.cell--selected):not(cell--disabled):hover {
+.cell:not(.cell--selected):not(.cell--disabled):hover {
     background-color: #9FA8DA;
 }
 

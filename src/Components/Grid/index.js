@@ -20,7 +20,7 @@ class Grid extends Component {
         for (let i = 1; i <= count; i++) {
             rows.push(
                 <Row
-                    drowNumber={i}
+                    rowNumber={i}
                     cellsCount={count}
                     disabledCells={disabledCells}
                     onCellClick={this.handleClickOnCell}
