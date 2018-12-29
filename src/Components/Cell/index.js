@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import './style.css'
 
 class Cell extends Component  {
     state = {
         selected: false,
         disabled: false,
+    }
+
+    componentDidMount() {
+        const { disabledCells, rowNumber, colNumber } = this.props
+        const disabledCell = disabledCells.find(cell => cell.row === 1 && cell.col === 1) 
+        console.log(disabledCell)
     }
 
     handleClick = () => {
@@ -20,5 +27,12 @@ class Cell extends Component  {
         )
     }
 }
+
+Cell.propTypes = {
+    rowNumber: PropTypes.number,
+    colNumber: PropTypes.number,
+    disabledCells: PropTypes.array,
+    onCellClick: PropTypes.func,
+};
     
 export default Cell
