@@ -4,6 +4,7 @@
     margin: 2px;
     background-color: #C5CAE9;
     cursor: pointer;
+    border-radius: 2px;
 }
 
 .cell--selected {
