@@ -3,16 +3,18 @@
     width: 50px;
     margin: 2px;
     background-color: #C5CAE9;
-    cursor: pointer;
     border-radius: 2px;
+    transition: background-color .2s ease-in;
+}
+
+.cell:not(.cell--selected):not(cell--disabled):hover {
+    background-color: #9FA8DA;
 }
 
 .cell--selected {
     background-color: #283593;
-    cursor: default;
 }
 
 .cell--disabled {
     background-color: #E0E0E0;
-    cursor: default;
 }

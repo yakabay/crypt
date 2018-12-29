@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './style.css'
 
 class Cell extends Component  {
-
     state = {
         selected: false,
         disabled: false,
