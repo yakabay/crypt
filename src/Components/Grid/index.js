@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Row from '../Row'
 import './style.css'
 
-const Grid = ({ count, onCellClick }) => {
-    const renderRows = () => {
+class Grid extends Component {
+    
+    renderRows = () => {
+        const { count, onCellClick } = this.props;
         const rows = [] 
         for (let i = 1; i <= count; i++) {
             rows.push(
@@ -14,11 +16,13 @@ const Grid = ({ count, onCellClick }) => {
         return rows
     }
 
-    return (
-        <div className="grid__wrapper">
-            {renderRows()}
-        </div>
-    )
+    render() {
+        return (
+            <div className="grid__wrapper">
+                {this.renderRows()}
+            </div>
+        )
+    }
 }
     
 export default Grid
