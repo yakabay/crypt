@@ -2,6 +2,16 @@
     height: 50px;
     width: 50px;
     margin: 2px;
-    background-color: #B2DFDB;
+    background-color: #C5CAE9;
     cursor: pointer;
+}
+
+.cell--selected {
+    background-color: #283593;
+    cursor: default;
+}
+
+.cell--disabled {
+    background-color: #E0E0E0;
+    cursor: default;
 }

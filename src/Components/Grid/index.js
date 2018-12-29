@@ -7,7 +7,7 @@ class Grid extends Component {
     handleClickOnCell = id => console.log(id)
     
     renderRows() {
-        const { count } = this.props;
+        const { count } = this.props
         const rows = [] 
         for (let i = 1; i <= count; i++) {
             rows.push(
