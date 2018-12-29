@@ -9,8 +9,8 @@ class Cell extends Component  {
 
     handleClick = () => {
         const { onCellClick, rowNumber, colNumber } = this.props
-        onCellClick({rowNumber, colNumber})
         this.setState({ selected: true })
+        onCellClick({rowNumber, colNumber})
     }        
 
     render() {
