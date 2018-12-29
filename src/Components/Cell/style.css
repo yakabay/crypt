@@ -4,7 +4,7 @@
     margin: 2px;
     background-color: #C5CAE9;
     border-radius: 2px;
-    transition: background-color .2s ease-in;
+    transition: all .2s ease-in;
 }
 
 .cell:not(.cell--selected):not(.cell--disabled):hover {

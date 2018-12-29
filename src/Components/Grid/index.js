@@ -5,13 +5,18 @@ import './style.css'
 class Grid extends Component {
     state = {
         disabledCells: [
-            {row: 1, col: 1},
-            {row: 2, col: 1},
-            {row: 3, col: 4},
+            {rowNumber: 1, colNumber: 1},
+            {rowNumber: 2, colNumber: 1},
+            {rowNumber: 3, colNumber: 4},
+            {rowNumber: 4, colNumber: 3},
         ]
     }
 
-    handleClickOnCell = id => console.log(id)
+    handleClickOnCell = disabledCell => {
+        this.setState( state => ({
+            disabledCells: [...state.disabledCells, disabledCell]
+        }))
+    }
     
     renderRows() {
         const { count } = this.props
