@@ -3,13 +3,15 @@ import Row from '../Row'
 import './style.css'
 
 class Grid extends Component {
+
+    handleClickOnCell = id => console.log(id)
     
-    renderRows = () => {
-        const { count, onCellClick } = this.props;
+    renderRows() {
+        const { count } = this.props;
         const rows = [] 
         for (let i = 1; i <= count; i++) {
             rows.push(
-                <Row rowNumber={i} cellsCount={count} onCellClick={onCellClick} key={i} />
+                <Row rowNumber={i} cellsCount={count} onCellClick={this.handleClickOnCell} key={i} />
             )
         }
 

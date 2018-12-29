@@ -8,15 +8,13 @@ class App extends Component {
     count: 4
   }
 
-  handleClickOnCell = id => console.log(id)
-
   render() {
     const { count } = this.state
 
     return (
       <div className="App">
         <Header />
-        <Grid count={count} onCellClick={this.handleClickOnCell} />
+        <Grid count={count} />
       </div>
     )
   }
