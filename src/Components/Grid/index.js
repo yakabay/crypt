@@ -12,9 +12,9 @@ class Grid extends Component {
         ]
     }
 
-    handleClickOnCell = disabledCell => {
+    handleClickOnCell = clickedCell => {
         this.setState( state => ({
-            disabledCells: [...state.disabledCells, disabledCell]
+            disabledCells: [...state.disabledCells, clickedCell]
         }))
     }
     

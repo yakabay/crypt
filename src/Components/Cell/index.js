@@ -8,12 +8,16 @@ class Cell extends Component  {
         disabled: false,
     }
 
-    componentDidMount() {
-        const { disabledCells, rowNumber, colNumber } = this.props
+    static getDerivedStateFromProps(props, state) {
+        const { disabledCells, rowNumber, colNumber } = props
         const disabledCell = disabledCells.find(
             cell => cell.rowNumber === rowNumber && cell.colNumber === colNumber
         ) 
-        disabledCell && this.setState({disabled: true})
+
+        if (disabledCell && !state.selected) {
+            return {disabled: true}
+        }
+        return null        
     }
 
     handleClick = () => {
