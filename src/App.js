@@ -5,7 +5,7 @@ import Grid from './Components/Grid'
 
 class App extends Component {
   state = {
-    count: 4
+    count: 6
   }
 
   render() {

@@ -14,7 +14,7 @@ class Cell extends Component  {
             cell => cell.rowNumber === rowNumber && cell.colNumber === colNumber
         ) 
 
-        if (disabledCell && !state.selected) {
+        if (disabledCell) {
             return {disabled: true}
         }
         return null        
