@@ -1,0 +1,20 @@
+.count-select {
+    display: flex;
+    align-items: center;
+}
+.count-select__decrease-button {
+    height: 20px;
+    width: 20px;
+    background-color: beige;
+}
+
+.count-select__value {
+    color: white;
+    font-weight: 500;
+}
+
+.count-select__increase-button {
+    height: 20px;
+    width: 20px;
+    background-color: beige;
+}

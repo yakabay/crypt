@@ -14,6 +14,9 @@ class Grid extends Component {
         }))
     }
 
+    // TODO: disable central cell if the count is odd
+    // use componentDidMount()
+
     calculateDisabledCells = clickedCell => {
         const n = this.props.count
         const rN = clickedCell.rowNumber // rN stans for "row in North position" 
