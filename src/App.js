@@ -10,20 +10,20 @@ class App extends Component {
 	
 	increaseCount = () => {
 		this.setState(state => {
-			if (state >= 10 ) {
-				return;
+			if (state.count === 10 ) {
+				return null;
 			}
-			return {count: ++state.count}
+			return {count: state.count +1}
 		})
 	}
 
 	decreaseCount = () => {
-		if (this.state <= 3 ) {
-			return null;
-		}
-		this.setState(state => ({
-			count: --state.count
-		}))
+		this.setState(state => {
+			if (this.state.count === 3 ) {
+				return null
+			}
+			return { count: state.count - 1 }
+		})
 	}
 	
 	render() {
