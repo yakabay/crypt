@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
+import EventSystem from '../../EventSystem';
 import './style.css'
 
 class Cell extends Component  {
@@ -8,7 +9,15 @@ class Cell extends Component  {
         disabled: false,
     }
 
-    static getDerivedStateFromProps(props, state) {
+    componentDidMount = () => {
+        EventSystem.subscribe('cellClicked', this.updateRiskCount);
+    }
+    
+    componentWillUnmount = () => {
+        EventSystem.unsubscribe('cellClicked', this.updateRiskCount);
+    }
+    
+    static getDerivedStateFromProps(props) {
         const { disabledCells, rowNumber, colNumber } = props
         const disabledCell = disabledCells.find(
             cell => cell.rowNumber === rowNumber && cell.colNumber === colNumber
@@ -18,6 +27,18 @@ class Cell extends Component  {
             return {disabled: true}
         }
         return null        
+    }
+
+    tryDisableCell() {
+        const { disabledCells, rowNumber, colNumber } = this.props
+        const disabledCell = disabledCells.find(
+            cell => cell.rowNumber === rowNumber && cell.colNumber === colNumber
+        ) 
+
+        if (disabledCell) {
+            return {disabled: true}
+        }
+        return null  
     }
 
     handleClick = () => {
