@@ -10,8 +10,8 @@ class EventSystem {
             return false;
         }
 
-        while (queue.length > 0) {
-            (queue.shift())(data);
+        for (let i=0; i<queue.length; ++i){
+                queue[i](data);
         }
 
         return true;
@@ -26,7 +26,7 @@ class EventSystem {
     }
 
     //  the callback parameter is optional. Without it the whole event will be removed, instead of
-    // just one subscibtion. Enough for simple implementations
+    // just one subscription. Enough for simple implementations
     unsubscribe(event, callback) {
         let queue = this.queue;
 
@@ -42,4 +42,4 @@ class EventSystem {
     }
 }
 
-module.exports = new EventSystem();
+export let eventSystem = new EventSystem();
