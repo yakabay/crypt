@@ -3,9 +3,12 @@
     align-items: center;
 }
 .count-select__decrease-button {
-    height: 20px;
-    width: 20px;
-    background-color: beige;
+    margin: 0 4px;
+    height: 10px;
+    width: 10px;
+    border-left: 2px solid beige;
+    border-bottom: 2px solid beige;
+    transform: rotate(45deg);
 }
 
 .count-select__value {
@@ -14,7 +17,10 @@
 }
 
 .count-select__increase-button {
-    height: 20px;
-    width: 20px;
-    background-color: beige;
+    margin: 0 4px;
+    height: 10px;
+    width: 10px;
+    border-top: 2px solid beige;
+    border-right: 2px solid beige;
+    transform: rotate(45deg);
 }
