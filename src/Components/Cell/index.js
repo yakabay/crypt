@@ -49,28 +49,28 @@ class Cell extends Component  {
 
 
 	calculateCellsForQueen = ({rowNumber: y, colNumber: x}) => {
-        const calculatedCells = [];
+        const cells = [];
 
-		const defineCellsForDirection = (x, y, dx, dy) => {
+		const computeCellsForDirection = (x, y, dx, dy) => {
             const newX = x + dx;
             const newY = y + dy;
 
             if (newX !== 0 && newX !== 9 && newY !== 0 && newY !== 9) {
-                calculatedCells.push({rowNumber: newY, colNumber: newX});
-                defineCellsForDirection(newX, newY, dx, dy)
+                cells.push({rowNumber: newY, colNumber: newX});
+                computeCellsForDirection(newX, newY, dx, dy)
             }
         };
 
-        defineCellsForDirection(x, y, 0, 1);
-        defineCellsForDirection(x, y, 1, 1);
-        defineCellsForDirection(x, y, 1, 0);
-        defineCellsForDirection(x, y, 1, -1);
-        defineCellsForDirection(x, y, 0, -1);
-        defineCellsForDirection(x, y, -1, -1);
-        defineCellsForDirection(x, y, -1, 0);
-        defineCellsForDirection(x, y, -1, 1);
+        computeCellsForDirection(x, y, 0, 1);
+        computeCellsForDirection(x, y, 1, 1);
+        computeCellsForDirection(x, y, 1, 0);
+        computeCellsForDirection(x, y, 1, -1);
+        computeCellsForDirection(x, y, 0, -1);
+        computeCellsForDirection(x, y, -1, -1);
+        computeCellsForDirection(x, y, -1, 0);
+        computeCellsForDirection(x, y, -1, 1);
         
-        return calculatedCells;
+        return cells;
 	};
 
     handleClick = () => {
