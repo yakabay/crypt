@@ -25,17 +25,17 @@ class App extends Component {
 			return { count: state.count - 1 }
 		})
 	}
-	
+
 	render() {
 		const { count } = this.state
 		return (
 			<div className="App">
-			<Header
-				count={count}
-				increaseCount={this.increaseCount}
-				decreaseCount={this.decreaseCount}
-			/>
-			<Grid count={count} />
+				<Header
+					count={count}
+					increaseCount={this.increaseCount}
+					decreaseCount={this.decreaseCount}
+				/>
+				<Grid count={count} />
 			</div>
 		)
 	}
